@@ -29,13 +29,12 @@
             
             A regra vale para anos >= 1582
       */
-        let ano = parseInt(prompt('Digite o número do ano:'))
+        let ano = parseInt(prompt('Digite o número de um ano superior a 1582:'))
 
-        if(isNaN(ano)) {
-            alert('Entrada inválida, digite um ano e não um texto!')
+        if(isNaN(ano) || ano < 1582) {
+            alert('Entrada inválida!')
         }
-
-        if(ano % 400 === 0){ 
+        else if(ano % 400 === 0){ 
             alert('O ano é bissexto!')
         }
         else if (ano % 4 === 0 && ano % 100 != 0){
